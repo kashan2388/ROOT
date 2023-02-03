@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : Status
 {
     //적 메모리 풀
     private EnemyMemoryPool enemyMemoryPool;
@@ -16,10 +16,7 @@ public class EnemyMovement : MonoBehaviour
 
     [Header("Status")]
     [SerializeField]
-    private int maxHP = 10;
-    private int currentHP;
-    [SerializeField]
-    private float moveSpeed = 1f;
+    private float moveSpeed;
 
 
     public void SetUp(EnemyMemoryPool enemyMemoryPool, Transform target, Vector3 direction)
@@ -28,6 +25,7 @@ public class EnemyMovement : MonoBehaviour
         this.target = target;
         this.direction = direction;
 
+        maxHP = 10;
         currentHP = maxHP;
     }
     private void Update()
