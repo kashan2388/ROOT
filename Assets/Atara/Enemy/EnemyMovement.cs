@@ -19,7 +19,7 @@ public class EnemyMovement : Status
     private float moveSpeed;
 
     private float lastAttackTime = 0f;
-    private bool isAttack = false;
+    //private bool isAttack = false;
 
     public void SetUp(EnemyMemoryPool enemyMemoryPool, Transform target, Vector3 direction)
     {
@@ -27,7 +27,6 @@ public class EnemyMovement : Status
         this.target = target;
         this.direction = direction;
 
-        maxHP = 10;
         currentHP = maxHP;
     }
     private void Update()
@@ -36,7 +35,8 @@ public class EnemyMovement : Status
         if(dis <= distance)
         {
             //Debug.Log("Stop");
-            isAttack = true;
+            //isAttack = true;
+            StartCoroutine("OnAttack");
         }
         else
         {
@@ -45,22 +45,32 @@ public class EnemyMovement : Status
         }
     }
 
-    private void Attack()
+    //private void Attack()
+    //{
+    //    if(isAttack == false)
+    //    {
+    //        return;
+    //    }
+    //    if(Time.time - lastAttackTime >= attackSpeed)
+    //    {
+    //        lastAttackTime = Time.time;
+
+    //        //나무의 TakeDamage를 호출한다 -> 데미지를 입힌다
+    //        target.gameObject.GetComponent<TreeMovement>().TakeDamage(attackDamage);
+
+    //        //애니메이션 재생?
+    //        //사운드 재생?
+    //    }
+    //}
+
+    private IEnumerator OnAttack()
     {
-        if(isAttack == false)
-        {
-            return;
-        }
-        if(Time.time - lastAttackTime >= attackSpeed)
-        {
-            lastAttackTime = Time.time;
+        target.gameObject.GetComponent<TreeMovement>().TakeDamage(attackDamage);
 
-            //나무의 TakeDamage를 호출한다 -> 데미지를 입힌다
-            target.gameObject.GetComponent<TreeMovement>().TakeDamage(attackDamage);
+        //애니메이션 재생?
+        //사운드 재생?
 
-            //애니메이션 재생?
-            //사운드 재생?
-        }
+        yield return new WaitForSeconds(attackSpeed);
     }
 
     public void TakeDamage(int damage)

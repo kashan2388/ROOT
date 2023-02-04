@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastFruitTime: 0
-  createSpeed: 10
+  createSpeed: 3
   positions:
   - {fileID: 181113450}
   - {fileID: 1114235847}

@@ -15,12 +15,13 @@ public class ManagerFruit : MonoBehaviour
     [SerializeField]
     private Transform[] positions;     //과일이 열릴 위치들
     [SerializeField]
-    private GameObject fruitPrefab;     //과일
+    private GameObject fruitPrefab;    //과일
 
     [SerializeField]
     private int achiveCount;       //목표 과일 수 -> 여기에 도달하면 스테이지 클리어
     [SerializeField]
-    private int currentCount;   //현재 과일 수
+    private int currentCount;      //현재 과일 수
+    private bool isCreate = false;  //과일이 생성됐는가?
 
     private void Awake()
     {
@@ -47,11 +48,17 @@ public class ManagerFruit : MonoBehaviour
         if(Time.time - lastFruitTime > createSpeed)
         {
             lastFruitTime = Time.time;
+            if(isCreate)
+            {
+                return;
+            }
 
             //과일 생성
             GameObject newFruit = Instantiate(fruitPrefab);
             newFruit.GetComponent<Fruit>().SetUp(this);
             newFruit.transform.position = positions[Random.Range(0, positions.Length)].position;
+
+            isCreate = true;
         }
     }
 
@@ -59,5 +66,6 @@ public class ManagerFruit : MonoBehaviour
     {
         //현재 과일 수 증가
         currentCount++;
+        isCreate = false;
     }
 }
