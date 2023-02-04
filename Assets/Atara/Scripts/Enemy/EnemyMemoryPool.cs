@@ -59,6 +59,7 @@ public class EnemyMemoryPool : MonoBehaviour
 
             GameObject item = enemyMemoryPool[rand].ActivePoolItem();
             item.transform.position = SpawnPoint.position;
+            item.transform.rotation = SpawnPoint.rotation;
 
             item.GetComponent<EnemyMovement>().SetUp(this, target, direction);
 

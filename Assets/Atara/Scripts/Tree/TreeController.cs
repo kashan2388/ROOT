@@ -7,19 +7,25 @@ using UnityEngine;
 public class TreeController : MonoBehaviour
 {
     [NonSerialized] public Vector3 cameraPoint;
+    private TreeMovement treeMovement;
 
     public GameObject bamboo;
-    public float bambooDelayTime;
-    bool bambooOn = false;
+    //public float bambooDelayTime;
+    //bool bambooOn = false;
+
+    private void Awake()
+    {
+        treeMovement = GetComponent<TreeMovement>();
+    }
     private void FixedUpdate()
     {
         OnClick(cameraPoint);
 
-        if(bambooOn == true)
-        {
-            bambooDelayTime -= Time.deltaTime;
-            bambooOn = false;
-        }
+        //if(bambooOn == true)
+        //{
+        //    bambooDelayTime -= Time.deltaTime;
+        //    bambooOn = false;
+        //}
 
 
     }
@@ -34,7 +40,6 @@ public class TreeController : MonoBehaviour
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.Log(hit.transform.name);
@@ -47,7 +52,7 @@ public class TreeController : MonoBehaviour
                 else if (hit.transform.gameObject.CompareTag("Enemy"))
                 {
                     CreateBamboo();
-                    hit.transform.GetComponent<EnemyMovement>().TakeDamage(10);
+                    hit.transform.GetComponent<EnemyMovement>().TakeDamage(treeMovement.attackDamage);
 
                     
                 }
@@ -66,12 +71,12 @@ public class TreeController : MonoBehaviour
         bamboo.transform.rotation = Quaternion.Euler(-90f, 0, 0);
 
         Instantiate(bamboo);
-        bambooOn = true;
+       // bambooOn = true;
 
-        if (bambooDelayTime <= 0)
-        {
-            Destroy(bamboo);
-        }
+        //if (bambooDelayTime <= 0)
+        //{
+        //    Destroy(bamboo);
+        //}
         return point;
     }
 }

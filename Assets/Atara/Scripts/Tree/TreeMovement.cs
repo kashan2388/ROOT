@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TreeMovement : Status
 {
+    [SerializeField]
+    private GameObject YouDie;
+
     //애니메이션
     private Animator anim;
 
@@ -12,19 +15,15 @@ public class TreeMovement : Status
         anim = GetComponent<Animator>();
     }
 
-    public void Attack(Transform position)
-    {
-        //죽순 생성
-        //죽순의 위치 = position
-    }
-
     public void TakeDamage(int damage)
     {
         currentHP -= damage;
-
         if (currentHP <= 0)
         {
+            YouDie.SetActive(true);
+            Time.timeScale = 0;
             //게임 재시작
+
         }
     }
 

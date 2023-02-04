@@ -33,7 +33,7 @@ public class EnemyMovement : Status
         this.target = target;
         this.direction = direction;
 
-        transform.LookAt(direction);
+        //transform.LookAt(direction);
     }
     private void OnEnable()
     {

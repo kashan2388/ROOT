@@ -25,28 +25,19 @@ public class ManagerFruit : MonoBehaviour
 
     public int CurrentCount => currentCount;
 
+    [SerializeField]
+    private GameObject nextStage;
+
     private void Awake()
     {
         treeMovement = GetComponent<TreeMovement>();
-
         currentCount = 0;
     }
 
     private void Update()
     {
-        CheckFruit();
         CreateFruit();
     }
-
-    //과일의 수를 확인한다
-    private void CheckFruit()
-    {
-        if(currentCount % 4 == 0)
-        {
-            treeMovement.GrowUpTree();
-        }
-    }
-
     //과일이 열린다
     private void CreateFruit()
     {
@@ -72,7 +63,25 @@ public class ManagerFruit : MonoBehaviour
         //현재 과일 수 증가
         currentCount++;
         isCreate = false;
+        CheckFruit();
     }
+
+     //과일의 수를 확인한다
+    private void CheckFruit()
+    {
+        //목표치 도달
+        if(currentCount >= achiveCount)
+        {
+            nextStage.SetActive(true);
+            Time.timeScale = 0;
+        }
+        //성장
+        if(currentCount % 4 == 0)
+        {
+            treeMovement.GrowUpTree();
+        }
+    }
+
 
     public bool CheckFruitCount(int count)
     {
