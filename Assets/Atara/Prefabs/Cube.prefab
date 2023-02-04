@@ -113,8 +113,9 @@ MonoBehaviour:
   maxHP: 10
   currentHP: 10
   attackSpeed: 2
-  attackDamage: 0
+  attackDamage: 2
   distance: 2
   moveSpeed: 3
   isAttack: 0
   isPlane: 0
+  id: 0
