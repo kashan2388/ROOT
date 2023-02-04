@@ -288,7 +288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &32059656
 Transform:
   m_ObjectHideFlags: 0
@@ -1094,7 +1094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &491966857
 Transform:
   m_ObjectHideFlags: 0
@@ -1122,13 +1122,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dc10265260fa1418a4fd2916cdac87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCount: 2
+  enemyCount: 3
   enemies:
-  - {fileID: 4539754766472532040, guid: b88acb5da6999fd439404291c6caf74f, type: 3}
   - {fileID: 3420882497328115561, guid: a15d8f326ba906744b26165e7a92cde4, type: 3}
-  range: 500000006400000064000000
+  - {fileID: 4539754766472532040, guid: 5b56e851bace0fa42942f4a95ccb3162, type: 3}
+  - {fileID: 3420882497328115561, guid: ab9e5773eebcc27429dd18746074e021, type: 3}
+  range: 280000005000000064000000
   rand: 0
-  SpawnPoint: {fileID: 491966857}
+  SpawnPoint: {fileID: 2110573977}
   enemySpawnTime: 4
   target: {fileID: 103051416}
 --- !u!1 &525227775
@@ -5192,7 +5193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2110573977
 Transform:
   m_ObjectHideFlags: 0
@@ -5220,11 +5221,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dc10265260fa1418a4fd2916cdac87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCount: 2
+  enemyCount: 3
   enemies:
-  - {fileID: 4539754766472532040, guid: b88acb5da6999fd439404291c6caf74f, type: 3}
   - {fileID: 3420882497328115561, guid: a15d8f326ba906744b26165e7a92cde4, type: 3}
-  range: 500000006400000064000000
+  - {fileID: 4539754766472532040, guid: 5b56e851bace0fa42942f4a95ccb3162, type: 3}
+  - {fileID: 3420882497328115561, guid: ab9e5773eebcc27429dd18746074e021, type: 3}
+  range: 280000005000000064000000
   rand: 0
   SpawnPoint: {fileID: 2110573977}
   enemySpawnTime: 4

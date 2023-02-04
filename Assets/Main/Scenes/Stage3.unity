@@ -677,7 +677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &285058456
 Transform:
   m_ObjectHideFlags: 0
@@ -707,9 +707,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCount: 2
   enemies:
-  - {fileID: 4539754766472532040, guid: b88acb5da6999fd439404291c6caf74f, type: 3}
-  - {fileID: 3420882497328115561, guid: a15d8f326ba906744b26165e7a92cde4, type: 3}
-  range: 500000006400000064000000
+  - {fileID: 3420882497328115561, guid: ab9e5773eebcc27429dd18746074e021, type: 3}
+  - {fileID: 3420882497328115561, guid: d15c7d4112237f346bde0fd172a97737, type: 3}
+  range: 1e0000006400000064000000
   rand: 0
   SpawnPoint: {fileID: 285058456}
   enemySpawnTime: 4
@@ -1135,7 +1135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &437764142
 Transform:
   m_ObjectHideFlags: 0
@@ -4921,7 +4921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1962741606
 Transform:
   m_ObjectHideFlags: 0
@@ -4951,9 +4951,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCount: 2
   enemies:
-  - {fileID: 4539754766472532040, guid: b88acb5da6999fd439404291c6caf74f, type: 3}
-  - {fileID: 3420882497328115561, guid: a15d8f326ba906744b26165e7a92cde4, type: 3}
-  range: 500000006400000064000000
+  - {fileID: 3420882497328115561, guid: ab9e5773eebcc27429dd18746074e021, type: 3}
+  - {fileID: 3420882497328115561, guid: d15c7d4112237f346bde0fd172a97737, type: 3}
+  range: 1e0000006400000064000000
   rand: 0
   SpawnPoint: {fileID: 1962741606}
   enemySpawnTime: 4

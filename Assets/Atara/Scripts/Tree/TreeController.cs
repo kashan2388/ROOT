@@ -52,9 +52,12 @@ public class TreeController : MonoBehaviour
                 else if (hit.transform.gameObject.CompareTag("Enemy"))
                 {
                     CreateBamboo();
+                    hit.transform.GetComponent<EnemyMovement>().TakeDamage(treeMovement.attackDamage);                    
+                }
+                else if(hit.transform.gameObject.CompareTag("Plane"))
+                {
+                    CreateBamboo();
                     hit.transform.GetComponent<EnemyMovement>().TakeDamage(treeMovement.attackDamage);
-
-                    
                 }
             }
         }        

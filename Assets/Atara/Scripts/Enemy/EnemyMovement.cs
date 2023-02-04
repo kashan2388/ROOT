@@ -77,7 +77,7 @@ public class EnemyMovement : Status
 
     public void TakeDamage(int damage)
     {
-        if(isPlane && transform.position.z > 10f)
+        if (isPlane && transform.position.z > 10f)
         {
             return;
         }
