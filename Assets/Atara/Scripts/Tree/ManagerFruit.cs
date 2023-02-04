@@ -23,6 +23,8 @@ public class ManagerFruit : MonoBehaviour
     private int currentCount;      //현재 과일 수
     private bool isCreate = false;  //과일이 생성됐는가?
 
+    public int CurrentCount => currentCount;
+
     private void Awake()
     {
         treeMovement = GetComponent<TreeMovement>();
@@ -67,5 +69,15 @@ public class ManagerFruit : MonoBehaviour
         //현재 과일 수 증가
         currentCount++;
         isCreate = false;
+    }
+
+    public bool CheckFruitCount(int count)
+    {
+        //필요한 갯수를 받아서 현재 과일의 수와 비교, 부족하면 false, 충분하면 true
+        if(currentCount >= count)
+        {
+            return true;
+        }
+        return false;
     }
 }

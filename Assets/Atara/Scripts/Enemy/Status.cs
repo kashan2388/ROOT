@@ -8,4 +8,9 @@ public class Status : MonoBehaviour
     public int currentHP;
     public float attackSpeed;
     public int attackDamage;
+
+    public void UpDamage(int damage)
+    {
+        attackDamage += damage;
+    }
 }
