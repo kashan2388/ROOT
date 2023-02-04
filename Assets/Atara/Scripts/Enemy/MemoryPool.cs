@@ -23,19 +23,21 @@ public class MemoryPool  //오브젝트를 생성, 삭제하는 것이 아니라 재사용한다
 
     //오브젝트가 임시로 보관되는 위치
     private Vector3 tempPosition = new Vector3(40, 1, 40);
-    public MemoryPool(GameObject poolObject)   //생성자 -> 초기화
+    private Transform tempPool;
+    public MemoryPool(GameObject poolObject, Transform tempPool)   //생성자 -> 초기화
     {
         maxCount = 0;
         activeCount = 0;
         this.poolObject = poolObject;
 
         poolItems = new List<PoolItem>();
+        this.tempPool = tempPool;
 
-        InstantiateObjects();
+        InstantiateObjects(tempPool);
     }
 
     //오브젝트를 생성한다
-    public void InstantiateObjects()
+    public void InstantiateObjects(Transform tempPool)
     {
         maxCount += increaseCount;
 
@@ -46,6 +48,7 @@ public class MemoryPool  //오브젝트를 생성, 삭제하는 것이 아니라 재사용한다
             poolItem.isActive = false;
             poolItem.gameObject = GameObject.Instantiate(poolObject);
             poolItem.gameObject.transform.position = tempPosition;   //임시 위치로 이동
+            poolItem.gameObject.transform.parent = tempPool;
             poolItem.gameObject.SetActive(false);
 
             poolItems.Add(poolItem);
@@ -79,7 +82,7 @@ public class MemoryPool  //오브젝트를 생성, 삭제하는 것이 아니라 재사용한다
         //모든 오브젝트가 활성화된 상태라면 새로운 오브젝트 활성해야 함
         if (maxCount == activeCount)
         {
-            InstantiateObjects();
+            InstantiateObjects(tempPool);
         }
 
         int count = poolItems.Count;

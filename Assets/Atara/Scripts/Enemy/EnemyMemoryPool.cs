@@ -33,7 +33,7 @@ public class EnemyMemoryPool : MonoBehaviour
     {
         for(int i = 0; i < enemyCount; ++i)
         {
-            enemyMemoryPool[i] = new MemoryPool(enemies[i]);
+            enemyMemoryPool[i] = new MemoryPool(enemies[i], SpawnPoint);
         }
         //enemyMemoryPool = new MemoryPool(enemyPrefab);
         //enemyMemoryPool2 = new MemoryPool(enemy2);
