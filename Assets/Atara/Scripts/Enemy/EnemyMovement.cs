@@ -17,7 +17,6 @@ public class EnemyMovement : Status
     [Header("Status")]
     [SerializeField]
     private float moveSpeed;
-
     private float lastAttackTime = 0f;
     [SerializeField]
     private bool isAttack = false;

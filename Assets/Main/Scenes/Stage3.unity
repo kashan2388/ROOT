@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uIManager: {fileID: 29447367}
   lastFruitTime: 0
-  createSpeed: 1
+  createSpeed: 0.5
   positions:
   - {fileID: 1391018400}
   - {fileID: 210513606}
@@ -310,7 +310,7 @@ MonoBehaviour:
   fruitPrefab: {fileID: 8927162500940983352, guid: 22e753a049148c34b9ac403db0ff0cb7, type: 3}
   achiveCount: 100
   currentCount: 0
-  nextStage: {fileID: 0}
+  nextStage: {fileID: 1171099179}
 --- !u!114 &254016630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
   attackSpeed: 0
   attackDamage: 1
   uIManager: {fileID: 29447367}
-  YouDie: {fileID: 0}
+  YouDie: {fileID: 1720564193}
 --- !u!114 &254016631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +397,6 @@ MonoBehaviour:
   - {fileID: 3420882497328115561, guid: 38bac08d7c694b04dab98e3b037ce531, type: 3}
   range: 1e0000006400000064000000
   rand: 0
-  SpawnPoint: {fileID: 285058456}
   enemySpawnTime: 4
   target: {fileID: 903345918}
 --- !u!1 &437764141
@@ -449,7 +448,6 @@ MonoBehaviour:
   - {fileID: 7325840594840960364, guid: cda81b4b390392e4d8d20eca5eb21802, type: 3}
   range: 640000000000000000000000
   rand: 0
-  SpawnPoint: {fileID: 437764142}
   enemySpawnTime: 5
   target: {fileID: 909220958}
 --- !u!1 &554423552
@@ -658,7 +656,6 @@ MonoBehaviour:
   - {fileID: 7325840594840960364, guid: cda81b4b390392e4d8d20eca5eb21802, type: 3}
   range: 640000000000000000000000
   rand: 0
-  SpawnPoint: {fileID: 633510173}
   enemySpawnTime: 5
   target: {fileID: 909220958}
 --- !u!1001 &681739076
@@ -1042,6 +1039,11 @@ Transform:
   m_Father: {fileID: 1227165930}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1171099179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 118693382677026628, guid: 7d482d3b5703f5f419699871cfcb0a51, type: 3}
+  m_PrefabInstance: {fileID: 557795939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1219779369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,6 +1268,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd8835a03f07d2e4d9613b75098c1dee, type: 3}
   m_PrefabInstance: {fileID: 681739076}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1720564193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 118693382396073378, guid: 7d482d3b5703f5f419699871cfcb0a51, type: 3}
+  m_PrefabInstance: {fileID: 557795939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1782699185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1424,5 @@ MonoBehaviour:
   - {fileID: 3420882497328115561, guid: 38bac08d7c694b04dab98e3b037ce531, type: 3}
   range: 1e0000006400000064000000
   rand: 0
-  SpawnPoint: {fileID: 1962741606}
   enemySpawnTime: 4
   target: {fileID: 903345918}

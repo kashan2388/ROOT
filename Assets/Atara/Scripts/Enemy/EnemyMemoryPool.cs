@@ -21,7 +21,6 @@ public class EnemyMemoryPool : MonoBehaviour
     private int rand;                   //범위에 따른 값(적 지정용)
 
     [Header("Spawn")]
-    [SerializeField]
     private Transform SpawnPoint;       //스폰 지점
     [SerializeField]
     private float enemySpawnTime = 5f;   //적 생성 주기
@@ -31,6 +30,7 @@ public class EnemyMemoryPool : MonoBehaviour
 
     private void Awake()
     {
+        SpawnPoint = this.transform;
         for(int i = 0; i < enemyCount; ++i)
         {
             enemyMemoryPool[i] = new MemoryPool(enemies[i], SpawnPoint);

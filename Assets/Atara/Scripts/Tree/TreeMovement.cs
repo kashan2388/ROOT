@@ -21,14 +21,13 @@ public class TreeMovement : Status
     public void TakeDamage(int damage)
     {
         currentHP -= damage;
-        uIManager.SetHP(currentHP, maxHP);
         if (currentHP <= 0)
         {
+            currentHP = 0;
             YouDie.SetActive(true);
             Time.timeScale = 0;
-            //게임 재시작
-
         }
+        uIManager.SetHP(currentHP, maxHP);
     }
 
     //트리 성장

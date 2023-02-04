@@ -592,12 +592,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef471fd927201e488ad3cce63b3916d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 20
-  currentHP: 20
-  attackSpeed: 1
-  attackDamage: 4
+  maxHP: 3
+  currentHP: 3
+  attackSpeed: 0.2
+  attackDamage: 5
   distance: 2
-  moveSpeed: 0.7
+  moveSpeed: 1
   isAttack: 0
   isPlane: 0
   id: 1
