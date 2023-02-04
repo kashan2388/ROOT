@@ -67,6 +67,7 @@ public class EnemyMemoryPool : MonoBehaviour
 
     public void DeactiveEnemy(int index, GameObject enemy)
     {
+        Debug.Log(index);
         enemyMemoryPool[index].DeactivePoolItem(enemy);
     }
 

@@ -707,8 +707,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCount: 2
   enemies:
-  - {fileID: 3420882497328115561, guid: ab9e5773eebcc27429dd18746074e021, type: 3}
-  - {fileID: 3420882497328115561, guid: d15c7d4112237f346bde0fd172a97737, type: 3}
+  - {fileID: 3420882497328115561, guid: 6f5b03fc34505004487ac35f8c05fc82, type: 3}
+  - {fileID: 3420882497328115561, guid: 38bac08d7c694b04dab98e3b037ce531, type: 3}
   range: 1e0000006400000064000000
   rand: 0
   SpawnPoint: {fileID: 285058456}
@@ -4951,8 +4951,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCount: 2
   enemies:
-  - {fileID: 3420882497328115561, guid: ab9e5773eebcc27429dd18746074e021, type: 3}
-  - {fileID: 3420882497328115561, guid: d15c7d4112237f346bde0fd172a97737, type: 3}
+  - {fileID: 3420882497328115561, guid: 6f5b03fc34505004487ac35f8c05fc82, type: 3}
+  - {fileID: 3420882497328115561, guid: 38bac08d7c694b04dab98e3b037ce531, type: 3}
   range: 1e0000006400000064000000
   rand: 0
   SpawnPoint: {fileID: 1962741606}
