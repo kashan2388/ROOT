@@ -18,6 +18,8 @@ public class EnemyMovement : Status
     [SerializeField]
     private float moveSpeed;
 
+    private float lastAttackTime = 0f;
+    private bool isAttack = false;
 
     public void SetUp(EnemyMemoryPool enemyMemoryPool, Transform target, Vector3 direction)
     {
@@ -33,12 +35,31 @@ public class EnemyMovement : Status
         float dis = (target.position - this.transform.position).magnitude;
         if(dis <= distance)
         {
-            Debug.Log("Stop");
+            //Debug.Log("Stop");
+            isAttack = true;
         }
         else
         {
             transform.position += direction * Time.deltaTime * moveSpeed;
             //Vector3 direction = (target.position - this.transform.position).normalized;
+        }
+    }
+
+    private void Attack()
+    {
+        if(isAttack == false)
+        {
+            return;
+        }
+        if(Time.time - lastAttackTime >= attackSpeed)
+        {
+            lastAttackTime = Time.time;
+
+            //나무의 TakeDamage를 호출한다 -> 데미지를 입힌다
+            target.gameObject.GetComponent<TreeMovement>().TakeDamage(attackDamage);
+
+            //애니메이션 재생?
+            //사운드 재생?
         }
     }
 
