@@ -31,7 +31,9 @@ public class EnemyMovement : Status
     {
         this.enemyMemoryPool = enemyMemoryPool;
         this.target = target;
-        this.direction = direction;        
+        this.direction = direction;
+
+        transform.LookAt(direction);
     }
     private void OnEnable()
     {

@@ -41,7 +41,10 @@ public class ManagerFruit : MonoBehaviour
     //과일의 수를 확인한다
     private void CheckFruit()
     {
-        
+        if(currentCount % 4 == 0)
+        {
+            treeMovement.GrowUpTree();
+        }
     }
 
     //과일이 열린다
@@ -73,7 +76,7 @@ public class ManagerFruit : MonoBehaviour
 
     public bool CheckFruitCount(int count)
     {
-        //필요한 갯수를 받아서 현재 과일의 수와 비교, 부족하면 false, 충분하면 true
+        //필요한 갯수를 받아서 현재 과일의 수와 비교, 부족하면 false, 충분하면 true -> 강화용
         if(currentCount >= count)
         {
             return true;
