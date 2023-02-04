@@ -27,11 +27,19 @@ public class EnemyMovement : Status
     [SerializeField]
     private int id;     //적의 아이디
 
+    [Header("Audio")]
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip dieClip;
+    [SerializeField]
+    private AudioClip hitCilp;
+
     public void SetUp(EnemyMemoryPool enemyMemoryPool, Transform target, Vector3 direction)
     {
         this.enemyMemoryPool = enemyMemoryPool;
         this.target = target;
         this.direction = direction;
+        audioSource = GetComponent<AudioSource>();
     }
     private void OnEnable()
     {
@@ -82,10 +90,18 @@ public class EnemyMovement : Status
             return;
         }
         currentHP -= damage;
+        PlaySound(hitCilp);
 
         if(currentHP <= 0)
         {
+            PlaySound(dieClip);
             enemyMemoryPool.DeactiveEnemy(id, this.gameObject);
         }
+    }
+
+    void PlaySound(AudioClip audio)
+    {
+        audioSource.clip = audio;
+        audioSource.Play();
     }
 }

@@ -594,13 +594,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 10
   currentHP: 10
-  attackSpeed: 0.2
+  attackSpeed: 1
   attackDamage: 3
   distance: 2
   moveSpeed: 0.5
   isAttack: 0
   isPlane: 0
   id: 2
+  dieClip: {fileID: 0}
+  hitCilp: {fileID: 0}
 --- !u!1 &3556488255278315162
 GameObject:
   m_ObjectHideFlags: 0

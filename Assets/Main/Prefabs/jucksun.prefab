@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8113244583010598064}
   - component: {fileID: 6304194776499849338}
   - component: {fileID: 5868886314682661554}
+  - component: {fileID: 4868909979323532316}
   m_Layer: 0
   m_Name: jucksun
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5511284234784483759}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.886525, y: 0, z: 0}
+  m_LocalPosition: {x: -1.6928751, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,3 +98,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bambooDelayTime: 2
+--- !u!95 &4868909979323532316
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5511284234784483759}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 191e33a5d86674644b89be983b855fa7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

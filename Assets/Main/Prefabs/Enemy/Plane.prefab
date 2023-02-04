@@ -61,13 +61,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 1
   currentHP: 1
-  attackSpeed: 0.1
+  attackSpeed: 2
   attackDamage: 50
   distance: 2
   moveSpeed: 5
   isAttack: 0
   isPlane: 1
   id: 0
+  dieClip: {fileID: 0}
+  hitCilp: {fileID: 0}
 --- !u!1001 &7668507761499990006
 PrefabInstance:
   m_ObjectHideFlags: 0
