@@ -478,6 +478,7 @@ MonoBehaviour:
   fruitPrefab: {fileID: 8927162500940983352, guid: 22e753a049148c34b9ac403db0ff0cb7, type: 3}
   achiveCount: 10
   currentCount: 0
+  nextStage: {fileID: 0}
 --- !u!114 &254016630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,6 +495,7 @@ MonoBehaviour:
   currentHP: 100
   attackSpeed: 0
   attackDamage: 1
+  YouDie: {fileID: 0}
 --- !u!114 &254016631
 MonoBehaviour:
   m_ObjectHideFlags: 0

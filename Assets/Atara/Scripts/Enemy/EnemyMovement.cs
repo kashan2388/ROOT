@@ -32,8 +32,6 @@ public class EnemyMovement : Status
         this.enemyMemoryPool = enemyMemoryPool;
         this.target = target;
         this.direction = direction;
-
-        //transform.LookAt(direction);
     }
     private void OnEnable()
     {
@@ -45,13 +43,11 @@ public class EnemyMovement : Status
         float dis = (target.position - this.transform.position).magnitude;
         if(dis <= distance)
         {
-            //Debug.Log("Stop");
             isAttack = true;
         }
         else
         {
             transform.position += direction * Time.deltaTime * moveSpeed;
-            //Vector3 direction = (target.position - this.transform.position).normalized;
         }
         Attack();
     }

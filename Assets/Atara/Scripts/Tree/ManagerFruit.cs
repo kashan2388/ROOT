@@ -6,6 +6,8 @@ public class ManagerFruit : MonoBehaviour
 {
     //트리의 성장을 담당
     private TreeMovement treeMovement;
+    [SerializeField]
+    private UIManager uIManager;
 
     [SerializeField]
     private float lastFruitTime;    //마지막에 열린 열매(열매가 열리는 주기)
@@ -32,6 +34,7 @@ public class ManagerFruit : MonoBehaviour
     {
         treeMovement = GetComponent<TreeMovement>();
         currentCount = 0;
+        uIManager.SetFruit(currentCount, achiveCount);
     }
 
     private void Update()
@@ -63,6 +66,7 @@ public class ManagerFruit : MonoBehaviour
         //현재 과일 수 증가
         currentCount++;
         isCreate = false;
+        uIManager.SetFruit(currentCount, achiveCount);
         CheckFruit();
     }
 

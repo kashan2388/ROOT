@@ -5,6 +5,8 @@ using UnityEngine;
 public class TreeMovement : Status
 {
     [SerializeField]
+    private UIManager uIManager;
+    [SerializeField]
     private GameObject YouDie;
 
     //애니메이션
@@ -13,11 +15,13 @@ public class TreeMovement : Status
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        uIManager.SetHP(currentHP, maxHP);
     }
 
     public void TakeDamage(int damage)
     {
         currentHP -= damage;
+        uIManager.SetHP(currentHP, maxHP);
         if (currentHP <= 0)
         {
             YouDie.SetActive(true);

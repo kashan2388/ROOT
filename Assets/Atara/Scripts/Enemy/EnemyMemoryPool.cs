@@ -35,8 +35,6 @@ public class EnemyMemoryPool : MonoBehaviour
         {
             enemyMemoryPool[i] = new MemoryPool(enemies[i], SpawnPoint);
         }
-        //enemyMemoryPool = new MemoryPool(enemyPrefab);
-        //enemyMemoryPool2 = new MemoryPool(enemy2);
         direction = (target.position - this.transform.position).normalized;
 
         StartCoroutine("SpawnEnemy");
