@@ -19,15 +19,24 @@ public class EnemyMovement : Status
     private float moveSpeed;
 
     private float lastAttackTime = 0f;
-    //private bool isAttack = false;
+    [SerializeField]
+    private bool isAttack = false;
+    [SerializeField]
+    private bool isPlane = false;       //비행기 입니까?
+
+    [SerializeField]
+    private int id;     //적의 아이디
 
     public void SetUp(EnemyMemoryPool enemyMemoryPool, Transform target, Vector3 direction)
     {
         this.enemyMemoryPool = enemyMemoryPool;
         this.target = target;
-        this.direction = direction;
-
+        this.direction = direction;        
+    }
+    private void OnEnable()
+    {
         currentHP = maxHP;
+        isAttack = false;
     }
     private void Update()
     {
@@ -35,51 +44,50 @@ public class EnemyMovement : Status
         if(dis <= distance)
         {
             //Debug.Log("Stop");
-            //isAttack = true;
-            StartCoroutine("OnAttack");
+            isAttack = true;
         }
         else
         {
             transform.position += direction * Time.deltaTime * moveSpeed;
             //Vector3 direction = (target.position - this.transform.position).normalized;
         }
+        Attack();
     }
 
-    //private void Attack()
-    //{
-    //    if(isAttack == false)
-    //    {
-    //        return;
-    //    }
-    //    if(Time.time - lastAttackTime >= attackSpeed)
-    //    {
-    //        lastAttackTime = Time.time;
-
-    //        //나무의 TakeDamage를 호출한다 -> 데미지를 입힌다
-    //        target.gameObject.GetComponent<TreeMovement>().TakeDamage(attackDamage);
-
-    //        //애니메이션 재생?
-    //        //사운드 재생?
-    //    }
-    //}
-
-    private IEnumerator OnAttack()
+    private void Attack()
     {
-        target.gameObject.GetComponent<TreeMovement>().TakeDamage(attackDamage);
+        if (isAttack == false)
+        {
+            return;
+        }
+        if (Time.time - lastAttackTime >= attackSpeed)
+        {
+            lastAttackTime = Time.time;
 
-        //애니메이션 재생?
-        //사운드 재생?
+            Debug.Log("Attack");
+            //나무의 TakeDamage를 호출한다 -> 데미지를 입힌다
+            target.gameObject.GetComponentInParent<TreeMovement>().TakeDamage(attackDamage);
 
-        yield return new WaitForSeconds(attackSpeed);
+            //애니메이션 재생?
+            //사운드 재생?
+            if(isPlane)
+            {
+                enemyMemoryPool.DeactiveEnemy(id, this.gameObject);
+            }
+        }
     }
 
     public void TakeDamage(int damage)
     {
+        if(isPlane && transform.position.z > 10f)
+        {
+            return;
+        }
         currentHP -= damage;
 
         if(currentHP <= 0)
         {
-            enemyMemoryPool.DeactiveEnemy(this.gameObject);
+            enemyMemoryPool.DeactiveEnemy(id, this.gameObject);
         }
     }
 }

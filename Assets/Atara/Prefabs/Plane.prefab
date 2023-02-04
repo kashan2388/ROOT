@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5936279257714105991}
   - component: {fileID: -4655216900859385627}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Plane
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,10 +111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 10
-  currentHP: 10
+  currentHP: 0
   attackSpeed: 2
   attackDamage: 0
   distance: 2
   moveSpeed: 3
   isAttack: 0
-  isPlane: 0
+  isPlane: 1
