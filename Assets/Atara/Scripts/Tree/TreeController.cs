@@ -60,7 +60,7 @@ public class TreeController : MonoBehaviour
                 }
                 else if(hit.transform.gameObject.CompareTag("Plane"))
                 {
-                    CreateBamboo();
+                    //CreateBamboo();
                     SoundManager.instance.PlaySound(hitCilp);
                     hit.transform.GetComponent<EnemyMovement>().TakeDamage(treeMovement.attackDamage);
                 }
