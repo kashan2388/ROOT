@@ -9,18 +9,18 @@ public class Pause : MonoBehaviour
     private bool isPause;
 
     private void Update()
-    {        
-        if(Input.anyKeyDown && isPause)
-        {
-            isPause = false;
-            pausePanel.SetActive(isPause);
-            Time.timeScale = 1;
-        }
+    {
         if(Input.GetMouseButtonDown(1))
         {
-            isPause = true;
+            isPause = !isPause;
             pausePanel.SetActive(isPause);
-            Time.timeScale = 0;
+            if (isPause) { Time.timeScale = 0; }
+            if (!isPause) { Time.timeScale = 1; }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 }
