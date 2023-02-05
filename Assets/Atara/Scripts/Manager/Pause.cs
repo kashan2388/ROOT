@@ -6,27 +6,21 @@ public class Pause : MonoBehaviour
 {
     [SerializeField]
     private GameObject pausePanel;
+    private bool isPause;
 
     private void Update()
-    {
+    {        
+        if(Input.anyKeyDown && isPause)
+        {
+            isPause = false;
+            pausePanel.SetActive(isPause);
+            Time.timeScale = 1;
+        }
         if(Input.GetMouseButtonDown(1))
         {
-            PauseGame();
+            isPause = true;
+            pausePanel.SetActive(isPause);
+            Time.timeScale = 0;
         }
-        if(Input.anyKey)
-        {
-            PlayGame();
-        }
-    }
-    public void PauseGame()
-    {
-        pausePanel.SetActive(true);
-        Time.timeScale = 0;
-    }
-    
-    public void PlayGame()
-    {
-        pausePanel.SetActive(false);
-        Time.timeScale = 1;
     }
 }
