@@ -56,11 +56,12 @@ public class ManagerFruit : MonoBehaviour
             {
                 return;
             }
-
+            int rand = Random.Range(0, positions.Length);
             //과일 생성
             GameObject newFruit = Instantiate(fruitPrefab);
             newFruit.GetComponent<Fruit>().SetUp(this);
-            newFruit.transform.position = positions[Random.Range(0, positions.Length)].position;
+            newFruit.transform.position = positions[rand].position;
+            newFruit.transform.parent = positions[rand].transform;
 
             isCreate = true;
         }

@@ -17,6 +17,8 @@ public class TreeMovement : Status
     //애니메이션
     private Animator anim;
 
+    private int growth = 0; //성장 단계
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -41,6 +43,8 @@ public class TreeMovement : Status
     //트리 성장
     public void GrowUpTree()
     {
+        growth++;
+        anim.SetInteger("Growth", growth);
         //애니메이션
         //오브젝트 교체
     }
