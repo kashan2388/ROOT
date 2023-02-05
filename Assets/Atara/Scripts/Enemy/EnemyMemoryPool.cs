@@ -28,6 +28,10 @@ public class EnemyMemoryPool : MonoBehaviour
     private Transform target;
     private Vector3 direction;
 
+    [SerializeField]
+    private AudioClip addClip;
+    [SerializeField]
+    private AudioClip destroyClip;
     private void Awake()
     {
         SpawnPoint = this.transform;
@@ -55,6 +59,11 @@ public class EnemyMemoryPool : MonoBehaviour
             else if(r < range[1]) { rand = 1; }
             else if(enemyCount == 3 && r < range[2]) { rand = 2; }
 
+            if(addClip != null)
+            {
+                SoundManager.instance.PlaySound(addClip);
+            }
+
             GameObject item = enemyMemoryPool[rand].ActivePoolItem();
             item.transform.position = SpawnPoint.position;
             item.transform.rotation = SpawnPoint.rotation;
@@ -67,12 +76,7 @@ public class EnemyMemoryPool : MonoBehaviour
 
     public void DeactiveEnemy(int index, GameObject enemy)
     {
-        Debug.Log(index);
+        SoundManager.instance.PlaySound(destroyClip);
         enemyMemoryPool[index].DeactivePoolItem(enemy);
     }
-
-    //public void DeactiveEnemy(GameObject enemy)
-    //{
-    //    enemyMemoryPool.DeactivePoolItem(enemy);
-    //}
 }

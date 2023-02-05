@@ -1,0 +1,251 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3194710700443448278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3194710700443448277}
+  - component: {fileID: 3194710700443448276}
+  m_Layer: 0
+  m_Name: GroundSpawnPoint 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3194710700443448277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194710700443448278}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -7, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3194710700554381313}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &3194710700443448276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194710700443448278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dc10265260fa1418a4fd2916cdac87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCount: 2
+  enemies:
+  - {fileID: 3420882497328115561, guid: 6f5b03fc34505004487ac35f8c05fc82, type: 3}
+  - {fileID: 3420882497328115561, guid: 38bac08d7c694b04dab98e3b037ce531, type: 3}
+  range: 1e0000006400000064000000
+  rand: 0
+  enemySpawnTime: 4
+  target: {fileID: 0}
+  createClip: {fileID: 8300000, guid: d9cf47f78bcfcdd4bbf44bf373a4cfdf, type: 3}
+  destroyClip: {fileID: 8300000, guid: edbad4883f19b424a84488243e1f6c15, type: 3}
+--- !u!1 &3194710700554381314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3194710700554381313}
+  m_Layer: 0
+  m_Name: EnemySpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3194710700554381313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194710700554381314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3194710700443448277}
+  - {fileID: 3194710700913236267}
+  - {fileID: 3194710700827671709}
+  - {fileID: 3194710701804201390}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3194710700827671710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3194710700827671709}
+  - component: {fileID: 3194710700827671708}
+  m_Layer: 0
+  m_Name: SkySpawnPoint 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3194710700827671709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194710700827671710}
+  m_LocalRotation: {x: -0.0023142921, y: -0.36073935, z: 0.13876306, w: 0.9222834}
+  m_LocalPosition: {x: 11, y: 15, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3194710700554381313}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 5.5, y: -42, z: 15}
+--- !u!114 &3194710700827671708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194710700827671710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dc10265260fa1418a4fd2916cdac87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCount: 1
+  enemies:
+  - {fileID: 7325840594840960364, guid: cda81b4b390392e4d8d20eca5eb21802, type: 3}
+  range: 640000000000000000000000
+  rand: 0
+  enemySpawnTime: 5
+  target: {fileID: 0}
+  createClip: {fileID: 8300000, guid: e4926d7cd731b3c4b8afd51b78b854e9, type: 3}
+  destroyClip: {fileID: 8300000, guid: a669d71ca78654b41acfb6895c44f428, type: 3}
+--- !u!1 &3194710700913236260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3194710700913236267}
+  - component: {fileID: 3194710700913236266}
+  m_Layer: 0
+  m_Name: GroundSpawnPoint 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3194710700913236267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194710700913236260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3194710700554381313}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3194710700913236266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194710700913236260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dc10265260fa1418a4fd2916cdac87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCount: 2
+  enemies:
+  - {fileID: 3420882497328115561, guid: 6f5b03fc34505004487ac35f8c05fc82, type: 3}
+  - {fileID: 3420882497328115561, guid: 38bac08d7c694b04dab98e3b037ce531, type: 3}
+  range: 1e0000006400000064000000
+  rand: 0
+  enemySpawnTime: 4
+  target: {fileID: 0}
+  createClip: {fileID: 8300000, guid: d9cf47f78bcfcdd4bbf44bf373a4cfdf, type: 3}
+  destroyClip: {fileID: 8300000, guid: c5130e4d20ce6d047bd24ffe04a8738c, type: 3}
+--- !u!1 &3194710701804201391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3194710701804201390}
+  - component: {fileID: 3194710701804201389}
+  m_Layer: 0
+  m_Name: SkySpawnPoint 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3194710701804201390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194710701804201391}
+  m_LocalRotation: {x: -0.113398165, y: -0.8708106, z: 0.1650721, w: 0.44897777}
+  m_LocalPosition: {x: -11, y: 15, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3194710700554381313}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 10.7, y: -123.5, z: 20.6}
+--- !u!114 &3194710701804201389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194710701804201391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dc10265260fa1418a4fd2916cdac87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCount: 1
+  enemies:
+  - {fileID: 7325840594840960364, guid: cda81b4b390392e4d8d20eca5eb21802, type: 3}
+  range: 640000000000000000000000
+  rand: 0
+  enemySpawnTime: 5
+  target: {fileID: 0}
+  createClip: {fileID: 8300000, guid: e4926d7cd731b3c4b8afd51b78b854e9, type: 3}
+  destroyClip: {fileID: 8300000, guid: a669d71ca78654b41acfb6895c44f428, type: 3}

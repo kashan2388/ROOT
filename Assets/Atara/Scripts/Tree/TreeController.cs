@@ -9,6 +9,9 @@ public class TreeController : MonoBehaviour
     [NonSerialized] public Vector3 cameraPoint;
     private TreeMovement treeMovement;
 
+    [SerializeField]
+    private AudioClip hitCilp;
+
     public GameObject bamboo;
     //public float bambooDelayTime;
     //bool bambooOn = false;
@@ -52,11 +55,13 @@ public class TreeController : MonoBehaviour
                 else if (hit.transform.gameObject.CompareTag("Enemy"))
                 {
                     CreateBamboo();
+                    SoundManager.instance.PlaySound(hitCilp);
                     hit.transform.GetComponent<EnemyMovement>().TakeDamage(treeMovement.attackDamage);                    
                 }
                 else if(hit.transform.gameObject.CompareTag("Plane"))
                 {
                     CreateBamboo();
+                    SoundManager.instance.PlaySound(hitCilp);
                     hit.transform.GetComponent<EnemyMovement>().TakeDamage(treeMovement.attackDamage);
                 }
             }

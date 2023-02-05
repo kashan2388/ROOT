@@ -25,6 +25,11 @@ public class ManagerFruit : MonoBehaviour
     private int currentCount;      //현재 과일 수
     private bool isCreate = false;  //과일이 생성됐는가?
 
+    [SerializeField]
+    private AudioClip getCilp;
+    [SerializeField]
+    private AudioClip victoryCilp;
+
     public int CurrentCount => currentCount;
 
     [SerializeField]
@@ -65,6 +70,7 @@ public class ManagerFruit : MonoBehaviour
     {
         //현재 과일 수 증가
         currentCount++;
+        SoundManager.instance.PlaySound(getCilp);
         isCreate = false;
         uIManager.SetFruit(currentCount, achiveCount);
         CheckFruit();
@@ -76,6 +82,7 @@ public class ManagerFruit : MonoBehaviour
         //목표치 도달
         if(currentCount >= achiveCount)
         {
+            SoundManager.instance.PlaySound(victoryCilp);
             nextStage.SetActive(true);
             Time.timeScale = 0;
         }
