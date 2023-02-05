@@ -68,8 +68,6 @@ MonoBehaviour:
   isAttack: 0
   isPlane: 1
   id: 0
-  dieClip: {fileID: 0}
-  hitCilp: {fileID: 0}
 --- !u!1001 &7668507761499990006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -121,9 +119,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6017024882570064705, guid: a03d1c1dfc04fcf48b7ef139018a1ec9, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2679766712895694909, guid: a03d1c1dfc04fcf48b7ef139018a1ec9, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2475442535801572233, guid: a03d1c1dfc04fcf48b7ef139018a1ec9, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a03d1c1dfc04fcf48b7ef139018a1ec9, type: 3}
       propertyPath: m_Name
       value: plane2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688629413119014822, guid: a03d1c1dfc04fcf48b7ef139018a1ec9, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808264854275127991, guid: a03d1c1dfc04fcf48b7ef139018a1ec9, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3880741409817808998, guid: a03d1c1dfc04fcf48b7ef139018a1ec9, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655399245451061770, guid: a03d1c1dfc04fcf48b7ef139018a1ec9, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a03d1c1dfc04fcf48b7ef139018a1ec9, type: 3}
