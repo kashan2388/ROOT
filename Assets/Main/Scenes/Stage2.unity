@@ -1358,11 +1358,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 118693382396073378, guid: 7d482d3b5703f5f419699871cfcb0a51, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118693382515381738, guid: 7d482d3b5703f5f419699871cfcb0a51, type: 3}
+      propertyPath: scenesNumber
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 118693383108379913, guid: 7d482d3b5703f5f419699871cfcb0a51, type: 3}
       propertyPath: scenesNumber
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 118693383280331746, guid: 7d482d3b5703f5f419699871cfcb0a51, type: 3}
       propertyPath: scenesNumber
